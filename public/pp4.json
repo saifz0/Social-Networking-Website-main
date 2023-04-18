@@ -1,0 +1,22 @@
+[
+    {
+        "Name": "Sameer",
+        "position": "Student at BML Munjal",
+        "job": "University"
+    },
+    {
+        "Name": "Percy",
+        "position": "Full stack developer",
+        "job": "works at Zomato"
+    },
+    {
+        "Name": "Jennifer",
+        "position": "Front end developer",
+        "job": "works at Google"
+    },
+    {
+        "Name": "Judith",
+        "position": "Back end developer",
+        "job": "works at ServiceNow"
+    }
+]

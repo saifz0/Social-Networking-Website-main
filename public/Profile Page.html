@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles-profilepage.css" />
+    <title></title>
+
+  <script>
+    fetch('pp1.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            appendData(data);
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
+
+    function appendData(data) {
+        let mainContainer = document.getElementById("myData");
+        for (let i = 0; i < data.length; i++) {
+            let div = document.createElement("div");
+            div.innerHTML = data[i].Name + "<br />" + data[i].position + "<br />" + data[i].job + "<br />" + "<br />" + "<br />";
+            mainContainer.appendChild(div);
+        }
+    }
+  </script>
+
+
+</head>
+<body>
+    <div class="Homepage">
+      <div class="taskbar">
+        <img src="images/v125_39.png" width="75" height="55" class="logo">
+        <div class="searchbar" >
+          <img class="searchicon" src="images/v125_43.png" >
+          <form id="myBtn" class="placeholder ">
+          <input type="text" placeholder="Search..">
+          </form>
+          <div id="myDropdown" class="dropdown-content">
+            <a style="font-size: 15px;"> People you may know...</a>
+            <a href="Profile Page (jacob).html">Jacob Smith</a>
+            <a href="Profile Page (percy).html ">Percy Shelly</a>
+            <a href="Profile Page (jennifer).html">Jennifer Williams</a>
+          </div>
+          <script src="dropdown.js"></script>
+
+        </div>
+        <figure id="taskbaricons">
+          <a href="Home.html" style="text-decoration: none; color: rgb(238, 238, 238);">
+          <img src="https://img.icons8.com/metro/16/ffffff/home.png" width="30" height="30" >
+          <figcaption id="homefig1"><span style="cursor:pointer"> Home</span></a></figcaption>
+        </figure>
+        <figure id="taskbaricons1">
+          <i class="fa-solid fa-house-user"></i><a href="My_Network.html" style="text-decoration: none; color: rgb(238, 238, 238);">
+          <img src="https://img.icons8.com/small/16/ffffff/network.png" width="30" height="30">
+          <figcaption id="homefig2"><span style="cursor:pointer"> My Network</span></a></figcaption>
+        </figure>
+        <figure id="taskbaricons2">
+          <a href="jobs.html" style="text-decoration: none; color: rgb(238, 238, 238);">
+          <img src="https://img.icons8.com/ios-glyphs/16/ffffff/find-matching-job.png" width="30" height="30">
+          <figcaption id="homefig6"><span style="cursor:pointer"> Jobs</span></a></figcaption>
+        </figure>
+        <figure id="taskbaricons3">
+          <a href="Messaging.html" style="text-decoration: none; color: rgb(238, 238, 238);">
+          <img src="https://img.icons8.com/material-rounded/16/ffffff/chat--v1.png" width="30" height="30">
+          <figcaption id="homefig3"><span style="cursor:pointer"> Messaging</span></a></figcaption>
+        </figure>
+        <figure id="taskbaricons4">
+          <img src="https://img.icons8.com/ios-filled/16/ffffff/appointment-reminders--v1.png" width="30" height="30">
+          <figcaption id="homefig4"><span style="cursor:pointer"> Notifications</span></figcaption>
+        </figure>
+        <figure id="taskbaricons5">
+          <a href="Profile Page.html" style="text-decoration: none; color: rgb(238, 238, 238);">
+          <img src="images/v125_48.png" width="35" height="30" class="roudedcorners">
+          <figcaption id="homefig5"> <span style="cursor:pointer">Me</span></a></figcaption>
+        </figure>
+      </div>
+
+
+
+      <div class="p_info">
+        <img src="images/v125_48.png" width="170" height="170" class="roudedcorners p_pic">
+        <div class="cover_pic"></div>
+        <div class="cover_text">Sameer Saini<br><p style="margin-top:7px">Student at BML Munjal University</p><br><p></p></div>
+      </div>
+
+      <div class="People_you_may_know">
+        <p style="text-align: center; margin-top: 5%; font-size:x-large; color: white;">People you may know</p>
+        <hr style="position:absolute;width:99.5%;margin-top: -2%;text-align:left;margin-left:0;">
+        <img src="images/v71_69.png" width="70" height="70" class="roudedcorners p_pic" style="margin-left: 4%;margin-top: 2.5%;">
+          <p id="myData" style="position:absolute;margin-top:3.5%;margin-left: 34%; font-size: 18px; color: white;">
+          </p>
+        <hr style="position:absolute;width:99.5%;margin-top: 32%;text-align:left;margin-left:0;">
+        <img src="images/v71_70.png" width="70" height="70" class="roudedcorners p_pic" style="margin-left: 4%;margin-top: 37%;">
+          
+        <hr style="position:absolute;width:99.5%;margin-top: 65%;text-align:left;margin-left:0;">
+        <img src="images/v44_68.png" width="70" height="70" class="roudedcorners p_pic" style="margin-left: 4%;margin-top: 70%;">
+
+        <hr style="position:absolute;width:99.5%;margin-top: 98%;text-align:left;margin-left:0;">
+        <img src="images/v44_69.png" width="70" height="70" class="roudedcorners p_pic" style="margin-left: 4%;margin-top: 104%;">
+          
+        <hr style="position:absolute;width:99.5%;margin-top: 132%;text-align:left;margin-left:0;">
+      </div>
+
+      <div class="analytics">
+        <p style="position:absolute; margin-left: 2%;margin-top: 1%; font-size:x-large;">Analytics</p>
+        <hr style="position:absolute;width:71.8%;margin-top: 4%;text-align:left;margin-left:0;">
+        <img src="images/v44_30.png" width=40" height="40" style="margin-left: 3%;margin-top: 7%;">
+        <p style="position:absolute;margin-top:-2.6%;margin-left: 6%; font-size: 20px;">
+          24 profile views
+        </p>
+        <img src="images/v44_32.png" width=40" height="40" style="margin-left: 20%;margin-top: 7%;">
+        <p style="position:absolute;margin-top:-2.5%;margin-left: 24%; font-size: 20px;">
+          3 article views
+        </p>
+        <img src="images/v44_34.png" width=40" height="40" style="margin-left: 20%;margin-top: 7%;">
+        <p style="position:absolute;margin-top:-2.5%;margin-left: 42%; font-size: 20px;">
+          8 search appearances
+        </p>
+      </div>
+      <div class="resources">
+        <p style="position:absolute; margin-left: 2%;margin-top: 1%; font-size:x-large;">Resources</p>
+        <hr style="position:absolute;width:71.8%;margin-top: 4%;text-align:left;margin-left:0;">
+        <img src="images/v44_38.png" width=40" height="40" style="margin-left: 3%;margin-top: 7%;">
+        <p style="position:absolute;margin-top:-2.6%;margin-left: 6.5%; font-size: 20px;">
+          My network
+        </p>
+        <br>
+        <img src="images/v44_40.png" width=40" height="40" style="margin-left: 3%;margin-top: 2%;">
+        <p style="position:absolute;margin-top:-2.7%;margin-left: 6.5%; font-size: 20px;">
+          Activity
+        </p>
+      </div>
+      <div class="activity">
+        <p style="position:absolute; margin-left: 2%;margin-top: 1%; font-size:x-large;">Activity</p>
+        <hr style="position:absolute;width:71.8%;margin-top: 4%;text-align:left;margin-left:0;">
+        <img src="images/v125_48.png" width="100" height="100" class="roudedcorners p_pic" style="margin-left: 1%;margin-top: 5.5%;">
+          <p style="position:absolute;margin-top:8%;margin-left: 10%; font-size: 25px;">
+          You liked a post from Jacob.
+          </p>
+      </div>
+      <div class="education">
+        <p style="position:absolute; margin-left: 2%;margin-top: 1%; font-size:x-large;">Education</p>
+        <hr style="position:absolute;width:71.8%;margin-top: 4%;text-align:left;margin-left:0;">
+        <img src="images/v44_50.png" width="100" height="100" class="roudedcorners p_pic" style="margin-left: 1%;margin-top: 5.5%;">
+          <p style="position:absolute;margin-top:8%;margin-left: 10%; font-size: 25px;">
+            BML Munjal University
+          </p>
+      </div>
+      <div class="interests">
+        <p style="position:absolute; margin-left: 2%;margin-top: 1%; font-size:x-large;">Interests</p>
+        <hr style="position:absolute;width:71.8%;margin-top: 4%;text-align:left;margin-left:0;">
+        <img src="images/v44_55.png" width="100" height="100" class="roudedcorners p_pic" style="margin-left: 1%;margin-top: 5.5%;">
+          <p style="position:absolute;margin-top:8%;margin-left: 10%; font-size: 25px;">
+            Bill Gates
+          </p>
+      </div>
+
+      
+
+
+    </div>
+</body>
+</html>
+
+
+
